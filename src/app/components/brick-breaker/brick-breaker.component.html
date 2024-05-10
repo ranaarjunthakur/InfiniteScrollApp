@@ -1,0 +1,9 @@
+<div class="game-board" (mousemove)="onMouseMove($event)">
+    <div class="score">Score: {{ score }}</div>
+    <div class="lives">Lives: {{ lives }}</div>
+    <app-paddle [paddleX]="paddleX"></app-paddle>
+    <app-ball [ballX]="ballX" [ballY]="ballY"></app-ball>
+    <app-brick *ngFor="let brick of bricks" [brick]="brick"></app-brick>
+    <div class="game-over" *ngIf="gameOver">Game Over</div>
+    <div class="game-won" *ngIf="gameWon">You Won!</div>
+  </div>

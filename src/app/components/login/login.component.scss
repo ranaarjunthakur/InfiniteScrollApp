@@ -1,0 +1,147 @@
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    border: none;
+    border-top: 1px solid rgb(176, 106, 252);
+    background: #212042;
+    color: #57557A;
+    width: 100%;
+    /* Ensure the card takes full width */
+    max-width: 550px;
+}
+
+.card p {
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.socialIcons i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #a464ec24;
+    background: #2A284D;
+    height: 40px;
+    width: 90px;
+}
+
+.socialIcons i:hover {
+    cursor: pointer;
+}
+
+.ri-twitter-x-line {
+    color: #56ABEC;
+}
+
+.ri-facebook-circle-fill {
+    color: #1775F1;
+}
+
+.ri-google-fill {
+    color: #CB5048;
+}
+
+.division {
+    float: none;
+    position: relative;
+    margin: 30px auto 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.division span {
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.myform {
+    padding: 0 25px 0 33px;
+}
+
+.form-control {
+    border: 1px solid #57557A;
+    border-radius: 3px;
+    background: #212042;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+::placeholder {
+    color: #57557A;
+    opacity: 1;
+}
+
+
+.form-control:focus {
+    border: 1px solid #57557A;
+    border-radius: 3px;
+    box-shadow: none;
+    background: #212042;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.bn {
+    text-decoration: underline;
+}
+
+.bn:hover {
+    cursor: pointer;
+}
+
+
+.btn-primary {
+    background: linear-gradient(135deg, rgba(176, 106, 252, 1) 39%, rgba(116, 17, 255, 1) 101%);
+    border: none;
+}
+
+.btn-primary:focus {
+    box-shadow: none;
+    border: none;
+}
+
+small {
+    color: #F2CEFF;
+}
+
+.ri-user-shared-line {
+    font-size: 13px;
+}
+
+@media(min-width: 767px) {
+    .bn {
+        text-align: right;
+    }
+}
+
+@media(max-width: 767px) {
+    .form-check {
+        text-align: center;
+    }
+
+    .bn {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media(max-width: 450px) {
+    .fab {
+        width: 100%;
+        height: 100%;
+    }
+
+    .division .line {
+        width: 50%;
+    }
+}

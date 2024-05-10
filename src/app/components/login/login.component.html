@@ -1,0 +1,42 @@
+<section>
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card py-3 px-2 mx-auto">
+          <p class="text-center mb-3 mt-2">Login To Continue!</p>
+          <div class="row mx-auto socialIcons">
+            <div class="col-4" [@cardHover]="isHovered ? 'hover' : 'noHover'" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+              <i class="ri-twitter-x-line ri-lg"></i>
+            </div>
+            <div class="col-4" [@cardHover]="isHovered ? 'hover' : 'noHover'" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+              <i class="ri-facebook-circle-fill ri-lg"></i>
+            </div>
+            <div class="col-4" [@cardHover]="isHovered ? 'hover' : 'noHover'" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+              <i class="ri-google-fill ri-lg"></i>
+            </div>
+          </div>
+          <div class="division">
+            <div class="row">
+              <div class="text-center"><span>Login with Email!</span></div>
+            </div>
+          </div>
+          <form  [formGroup]="loginForm" class="myform">
+            <div class="form-group">
+                <mat-label>Email</mat-label>
+                <input mat-input formControlName="email" type="email" class="form-control" placeholder="Enter Email">
+              </div>
+             <div class="form-group">
+              <mat-label>Password</mat-label>
+              <input mat-input formControlName="password" type="password" class="form-control" placeholder="Enter a Password">
+              </div>
+              <div class="form-group mt-3">
+                <button (click)="submit()" mat-raised-button type="button" class="btn btn-block btn-primary btn-lg"><small><i class="ri-user-shared-line"></i>User Login</small></button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

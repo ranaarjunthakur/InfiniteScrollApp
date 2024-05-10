@@ -1,0 +1,74 @@
+
+          <!-- <h2 mat-dialog-title>Cart</h2> -->
+          @if(this.cartItem.length !== 0){
+              <div class="master-container">
+                
+                @for (addItems of this.cartItem; track $index) {
+                  <div class="card cart">
+                    <label class="title">Your cart</label>
+                    <div class="products">
+                      <div class="product">
+                          <img class="rounded-circle img-fluid  w-100" src="{{ addItems?.strDrinkThumb}}" alt="addItemImg" />
+                        <div>
+                          <span>{{addItems?.strDrink}}</span>
+                          <p>E{{addItems.strAlcoholic}}</p>
+                          <p>{{addItems.strCategory}}</p>
+                        </div>
+                        <div class="quantity">
+                          <button (click)="increaseItem(addItems?.idDrink)" class="bg-warning text-white" mat-mini-fab>
+                            <i class="ri-add-line"></i>
+                          </button>
+                          <label class="text-white">{{count}}</label>
+                          <button (click)="decreaseItem()" class="bg-warning text-white" mat-mini-fab>
+                            <i class="ri-subtract-line"></i>
+                          </button>
+                        </div>
+                        <label class="price small">${{addItems?.idDrink}}</label>
+                        <span (click)="deleteItem(addItems)" class="badge rounded-pill text-white position-absolute">Remove Item</span>
+                      </div>
+                    </div>
+                  </div>
+                }
+               
+              
+                  <div class="card coupons">
+                    <label class="title">Apply coupons</label>
+                    <form class="form">
+                        <input type="text" placeholder="Apply your coupons here" class="input_field">
+                        <button>Apply</button>
+                    </form>
+                  </div>
+
+                <div class="card checkout">
+                  <label class="title">Checkout</label>
+                  <div class="details">
+                    <span>Your cart subtotal:</span>
+                    <span>47.99$</span>
+                    <span>Discount through applied coupons:</span>
+                    <span>3.99$</span>
+                    <span>Shipping fees:</span>
+                    <span>4.99$</span>
+                  </div>
+                  <div class="checkout--footer">
+                    <label class="price"><sup>$</sup>57.99</label>
+                    <button class="checkout-btn">Checkout</button>
+                  </div>
+                </div>
+              </div>
+            }
+            
+
+              @if (this.cartItem.length == 0) {
+                <div class="card cart">
+                  <label class="title">Your cart</label>
+                  <div class="products">
+                  <h5>No items in your cart! Please add</h5>
+                  </div>
+                </div>
+              }
+            
+            <mat-dialog-actions class="d-flex justify-content-center align-items-center gap-3">
+              <button  mat-raised-button mat-dialog-close>No</button>
+              <button color="accent" mat-raised-button mat-dialog-close (click)="close()" cdkFocusInitial>Ok</button>
+            </mat-dialog-actions>
+

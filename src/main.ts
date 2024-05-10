@@ -7,7 +7,7 @@ import {  PreloadAllModules,  withPreloading, } from '@angular/router';
 import { routes } from './app/app.routes';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { IonicModule } from '@ionic/angular';
+// import { IonicModule } from '@ionic/angular';
 
 
 
@@ -17,7 +17,7 @@ bootstrapApplication(AppComponent, {
     provideIonicAngular(),
     provideRouter(routes, withComponentInputBinding(),withPreloading(PreloadAllModules)),
     provideHttpClient(), provideAnimationsAsync(),
-    importProvidersFrom(IonicModule.forRoot({})),
+    // importProvidersFrom(IonicModule.forRoot({})),
     importProvidersFrom(HttpClientModule),
   ],
 });

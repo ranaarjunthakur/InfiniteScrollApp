@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MaterialModule } from '../../modules/material/material.module';
-import { IonicModule } from '@ionic/angular';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule,  FormsModule } from '@angular/forms';
@@ -11,7 +10,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, MaterialModule, IonicModule,ReactiveFormsModule,FormsModule],
+  imports: [CommonModule, MaterialModule,ReactiveFormsModule,FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
   animations: [

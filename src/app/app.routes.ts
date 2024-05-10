@@ -27,5 +27,9 @@ export const routes: Routes = [
         component:BrickBreakerComponent,
         title: 'Brick  Breaker Game',
     },
+    {
+        path:'**',
+        component:LoginComponent,
+    },
 
 ];

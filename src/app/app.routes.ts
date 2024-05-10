@@ -3,9 +3,9 @@ import { LoginComponent } from './components/login/login.component';
 import { AnimationComponent } from './components/animation/animation.component';
 import { authGuard } from './auth/auth.guard';
 import { BrickBreakerComponent } from './components/brick-breaker/brick-breaker.component';
+import { NotFoundComponentComponent } from './components/not-found-component/not-found-component.component';
 
 export const routes: Routes = [
-
     {
         path:'',
         component:LoginComponent,
@@ -29,7 +29,7 @@ export const routes: Routes = [
     },
     {
         path:'**',
-        component:LoginComponent,
+        component: NotFoundComponentComponent
     },
 
 ];
